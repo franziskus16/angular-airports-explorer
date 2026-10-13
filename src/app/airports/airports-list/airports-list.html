@@ -1,0 +1,55 @@
+<div class="page">
+  <header class="heading">
+    <div>
+      <p class="eyebrow">Directory</p>
+      <h1>Airports</h1>
+    </div>
+
+    <div class="search">
+      <label for="search">Search by city, country, name or code</label>
+      <input
+        id="search"
+        type="search"
+        placeholder="e.g. Lisbon or LIS"
+        autocomplete="off"
+        [value]="query()"
+        (input)="onSearch($event)"
+        aria-controls="airport-results"
+      />
+    </div>
+  </header>
+
+  @if (airports.isLoading()) {
+    <app-status-message kind="loading" title="Loading airports…" />
+  } @else if (airports.error()) {
+    <app-status-message
+      kind="error"
+      title="We couldn't load the airports."
+      detail="Check your connection and try again."
+    >
+      <button type="button" class="button" (click)="airports.reload()">Try again</button>
+    </app-status-message>
+  } @else {
+    <p class="count" role="status">
+      {{ visibleAirports().length }}
+      {{ visibleAirports().length === 1 ? 'airport' : 'airports' }}
+      @if (query()) {
+        matching “{{ query() }}”
+      }
+    </p>
+
+    @if (visibleAirports().length) {
+      <ul id="airport-results" class="grid">
+        @for (airport of visibleAirports(); track airport.code) {
+          <li><app-airport-card [airport]="airport" /></li>
+        }
+      </ul>
+    } @else {
+      <app-status-message
+        kind="empty"
+        title="No airports found."
+        detail="Try another city, country or three-letter code."
+      />
+    }
+  }
+</div>

@@ -1,0 +1,11 @@
+{
+  "code": "JFK",
+  "icao": "KJFK",
+  "name": "John F. Kennedy International Airport",
+  "city": "New York",
+  "country": "United States",
+  "operator": "Port Authority of New York and New Jersey",
+  "timeZone": "America/New_York",
+  "latitude": 40.641,
+  "longitude": -73.778
+}

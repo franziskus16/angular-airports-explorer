@@ -1,0 +1,11 @@
+<a class="card" [routerLink]="['/airports', airport().code]">
+  <span class="code" aria-hidden="true">{{ airport().code }}</span>
+  <span class="body">
+    <span class="place">{{ airport().city }}, {{ airport().country }}</span>
+    <span class="name">{{ airport().name }}</span>
+    <span class="visually-hidden">, IATA code {{ airport().code }}</span>
+  </span>
+  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+</a>

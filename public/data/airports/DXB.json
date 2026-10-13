@@ -1,0 +1,11 @@
+{
+  "code": "DXB",
+  "icao": "OMDB",
+  "name": "Dubai International Airport",
+  "city": "Dubai",
+  "country": "United Arab Emirates",
+  "operator": "Dubai Airports",
+  "timeZone": "Asia/Dubai",
+  "latitude": 25.253,
+  "longitude": 55.364
+}

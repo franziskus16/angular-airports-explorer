@@ -1,0 +1,11 @@
+{
+  "code": "LHR",
+  "icao": "EGLL",
+  "name": "Heathrow Airport",
+  "city": "London",
+  "country": "United Kingdom",
+  "operator": "Heathrow Airport Holdings",
+  "timeZone": "Europe/London",
+  "latitude": 51.47,
+  "longitude": -0.454
+}

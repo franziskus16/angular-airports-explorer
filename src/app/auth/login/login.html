@@ -1,0 +1,48 @@
+<div class="page login">
+  <section class="intro">
+    <p class="eyebrow">Departures · Arrivals · Everything in between</p>
+    <h1>Every gate, one search away.</h1>
+    <p class="lead">Browse major international airports, their codes, operators and local time.</p>
+  </section>
+
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <h2>Sign in</h2>
+    <p class="hint">Demo: any username (3+ characters) and password (4+) will work.</p>
+
+    <div class="field">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        formControlName="username"
+        autocomplete="username"
+        [attr.aria-invalid]="showError('username')"
+        aria-describedby="username-error"
+      />
+      <p id="username-error" class="error" aria-live="polite">
+        @if (showError('username')) {
+          Enter a username of at least 3 characters.
+        }
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        autocomplete="current-password"
+        [attr.aria-invalid]="showError('password')"
+        aria-describedby="password-error"
+      />
+      <p id="password-error" class="error" aria-live="polite">
+        @if (showError('password')) {
+          Enter a password of at least 4 characters.
+        }
+      </p>
+    </div>
+
+    <button type="submit" class="button submit">Sign in</button>
+  </form>
+</div>

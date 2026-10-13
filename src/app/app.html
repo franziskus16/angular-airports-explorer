@@ -1,0 +1,33 @@
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="page header__inner">
+    <a class="brand" routerLink="/">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" />
+        <path d="M7 19.5 25 12.5M11 21.5h14" />
+      </svg>
+      <span>Airports Explorer</span>
+    </a>
+
+    @if (isLoggedIn()) {
+      <div class="session">
+        <span class="session__user">
+          <span class="visually-hidden">Signed in as </span>{{ username() }}
+        </span>
+        <button type="button" class="button button--ghost" (click)="logout()">Log out</button>
+      </div>
+    }
+  </div>
+</header>
+
+<main id="main" class="main" tabindex="-1">
+  <router-outlet />
+</main>
+
+<footer class="footer">
+  <div class="page footer__inner">
+    <span>Angular · NgRx · TypeScript</span>
+    <span>Demo project by Francesc Gimenez. Airport data is illustrative.</span>
+  </div>
+</footer>

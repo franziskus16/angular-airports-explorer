@@ -1,0 +1,11 @@
+{
+  "code": "CDG",
+  "icao": "LFPG",
+  "name": "Paris Charles de Gaulle Airport",
+  "city": "Paris",
+  "country": "France",
+  "operator": "Groupe ADP",
+  "timeZone": "Europe/Paris",
+  "latitude": 49.01,
+  "longitude": 2.548
+}

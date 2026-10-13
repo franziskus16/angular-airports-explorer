@@ -1,0 +1,62 @@
+[
+  {
+    "code": "BCN",
+    "name": "Josep Tarradellas Barcelona–El Prat Airport",
+    "city": "Barcelona",
+    "country": "Spain"
+  },
+  {
+    "code": "MAD",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "city": "Madrid",
+    "country": "Spain"
+  },
+  {
+    "code": "LIS",
+    "name": "Humberto Delgado Airport",
+    "city": "Lisbon",
+    "country": "Portugal"
+  },
+  {
+    "code": "CDG",
+    "name": "Paris Charles de Gaulle Airport",
+    "city": "Paris",
+    "country": "France"
+  },
+  {
+    "code": "LHR",
+    "name": "Heathrow Airport",
+    "city": "London",
+    "country": "United Kingdom"
+  },
+  {
+    "code": "AMS",
+    "name": "Amsterdam Airport Schiphol",
+    "city": "Amsterdam",
+    "country": "Netherlands"
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt Airport",
+    "city": "Frankfurt",
+    "country": "Germany"
+  },
+  {
+    "code": "FCO",
+    "name": "Leonardo da Vinci–Fiumicino Airport",
+    "city": "Rome",
+    "country": "Italy"
+  },
+  {
+    "code": "DXB",
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "country": "United Arab Emirates"
+  },
+  {
+    "code": "JFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "country": "United States"
+  }
+]

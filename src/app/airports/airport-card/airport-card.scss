@@ -1,0 +1,67 @@
+:host {
+  display: block;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  height: 100%;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+
+  &:hover .arrow {
+    transform: translateX(3px);
+    stroke: var(--accent);
+  }
+}
+
+.code {
+  padding-right: 1.25rem;
+  border-right: 2px dashed var(--line);
+  font: 600 2.25rem/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.body {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.place {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.name {
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.arrow {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 140ms ease;
+}

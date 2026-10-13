@@ -1,0 +1,11 @@
+{
+  "code": "AMS",
+  "icao": "EHAM",
+  "name": "Amsterdam Airport Schiphol",
+  "city": "Amsterdam",
+  "country": "Netherlands",
+  "operator": "Royal Schiphol Group",
+  "timeZone": "Europe/Amsterdam",
+  "latitude": 52.31,
+  "longitude": 4.768
+}

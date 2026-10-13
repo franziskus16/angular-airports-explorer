@@ -1,0 +1,75 @@
+<div class="page">
+  <a class="back" routerLink="/airports">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+    All airports
+  </a>
+
+  @if (airport.isLoading()) {
+    <app-status-message kind="loading" title="Loading airport…" />
+  } @else if (airport.error()) {
+    <app-status-message
+      kind="error"
+      title="We couldn't find that airport."
+      [detail]="'There is no airport with the code “' + code() + '” in this directory.'"
+    >
+      <a class="button" routerLink="/airports">Back to all airports</a>
+    </app-status-message>
+  } @else if (airport.hasValue()) {
+    @let a = airport.value();
+    <article class="detail">
+      <header class="hero">
+        <p class="hero__code" aria-hidden="true">{{ a.code }}</p>
+        <div>
+          <p class="eyebrow">{{ a.city }}, {{ a.country }}</p>
+          <h1>{{ a.name }}</h1>
+        </div>
+      </header>
+
+      <div class="panels">
+        @if (localTime(); as lt) {
+          <section class="panel panel--time" aria-labelledby="time-label">
+            <h2 id="time-label" class="panel__label">Local time</h2>
+            <p class="time">{{ lt.time }}</p>
+            <p class="panel__meta">{{ a.timeZone }} · {{ lt.offset }}</p>
+          </section>
+        }
+
+        <section class="panel" aria-labelledby="facts-label">
+          <h2 id="facts-label" class="panel__label">Airport facts</h2>
+          <dl class="facts">
+            <div>
+              <dt>IATA code</dt>
+              <dd class="mono">{{ a.code }}</dd>
+            </div>
+            <div>
+              <dt>ICAO code</dt>
+              <dd class="mono">{{ a.icao }}</dd>
+            </div>
+            <div>
+              <dt>City</dt>
+              <dd>{{ a.city }}</dd>
+            </div>
+            <div>
+              <dt>Country</dt>
+              <dd>{{ a.country }}</dd>
+            </div>
+            <div>
+              <dt>Operator</dt>
+              <dd>{{ a.operator }}</dd>
+            </div>
+            <div>
+              <dt>Coordinates</dt>
+              <dd class="mono">
+                <a [href]="mapUrl(a)" target="_blank" rel="noopener">
+                  {{ formatCoordinate(a.latitude, 'N', 'S') }},
+                  {{ formatCoordinate(a.longitude, 'E', 'W') }}
+                  <span class="visually-hidden">(opens map in a new tab)</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </article>
+  }
+</div>

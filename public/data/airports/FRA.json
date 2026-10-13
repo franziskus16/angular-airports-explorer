@@ -1,0 +1,11 @@
+{
+  "code": "FRA",
+  "icao": "EDDF",
+  "name": "Frankfurt Airport",
+  "city": "Frankfurt",
+  "country": "Germany",
+  "operator": "Fraport",
+  "timeZone": "Europe/Berlin",
+  "latitude": 50.038,
+  "longitude": 8.562
+}
